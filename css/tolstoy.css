@@ -1,0 +1,24 @@
+.photoarea {
+	padding: 10px 10px;
+	min-width: 300px;
+	float: right;
+	background-color: #D7E0F5;
+	display: inline-block;
+	width: 100%;
+	margin: 5px;
+	text-align: center;
+	vertical-align: top;
+}
+
+.photoarea h3{
+    cursor: move;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #1abc9c;
+}
+
+.img-circle {
+	border-radius: 50%;
+	width: 120px;
+ 	height: 120px;
+ 	padding: 5px;
+}
