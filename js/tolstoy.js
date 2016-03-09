@@ -1,8 +1,20 @@
-var the_pierres =  document.getElementById("pierre");
-Sortable.create(the_pierres, {group: "pierre"});
+Sortable.create(pierre, {group: 'the_pierres'});
 
-var the_andreis =  document.getElementById("andrei");
-Sortable.create(the_andreis, {group: "andrei"});
+Sortable.create(natasha, {group: 'the_natashas'});
 
-var the_natashas =  document.getElementById("natasha");
-Sortable.create(the_natashas, {group: "natasha"});
+Sortable.create(andrei, {group: 'the_andreis'});
+
+Sortable.create(
+	droppierre, {
+		group: {put: ['the_pierres']}
+	});
+
+Sortable.create(
+	dropnatasha, {
+		group: {put: ['the_natashas']}
+	});
+
+Sortable.create(
+	dropandrei, {
+		group: {put: ['the_andreis']}
+	});

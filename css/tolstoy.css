@@ -1,5 +1,5 @@
 .photoarea {
-	padding: 10px 10px;
+	padding: 10px;
 	min-width: 230px;
 	float: right;
 	background-color: #D7E0F5;
@@ -21,4 +21,19 @@
 	width: 120px;
  	height: 120px;
  	padding: 5px;
+}
+
+#droppierre, #dropnatasha, #dropandrei {
+  padding: 10px;
+  min-width: 270px;
+  display: inline-block;
+  border: 1px dashed #f60;
+  min-height: 150px;
+  margin: 5px;
+  text-align: center;
+}
+
+#droppierre, #dropnatasha, #dropandrei h6 {
+	color: #ddd;
+	text-align: center;
 }
