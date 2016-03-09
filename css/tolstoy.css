@@ -1,16 +1,21 @@
-.photoarea {
+.sort-columns {
 	padding: 10px;
-	min-width: 230px;
-	float: right;
-	background-color: #D7E0F5;
-	display: inline-block;
 	width: 100%;
 	margin: 5px;
 	text-align: center;
+	display: inline-block;
+	
+}
+
+.photoarea {
+	margin: 5px;
+	min-width: 230px;
+	background-color: #D7E0F5;
 	vertical-align: top;
 }
 
 .photoarea h3{
+	padding: 10px;
     cursor: move;
     padding-bottom: 10px;
     border-bottom: 1px solid #1abc9c;
@@ -24,16 +29,7 @@
 }
 
 #droppierre, #dropnatasha, #dropandrei {
-  padding: 10px;
-  min-width: 270px;
-  display: inline-block;
   border: 1px dashed #f60;
-  min-height: 150px;
-  margin: 5px;
+  color: #ddd;
   text-align: center;
-}
-
-#droppierre, #dropnatasha, #dropandrei h6 {
-	color: #ddd;
-	text-align: center;
 }
