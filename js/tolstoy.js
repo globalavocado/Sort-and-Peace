@@ -2,6 +2,10 @@ var the_pierres =  document.getElementById("pierre");
 var the_natashas =  document.getElementById("natasha");
 var the_andreis =  document.getElementById("andrei");
 
+var placeholder1 =  document.getElementById("placeholderpierre");
+var placeholder2 =  document.getElementById("placeholdernatasha");
+var placeholder3 =  document.getElementById("placeholderandrei");
+
 Sortable.create(pierre, {
 		group: {
 			name:'the_pierres',
@@ -28,7 +32,10 @@ Sortable.create(
 		group: {
 			name: 'droppierre',
 			put: ['the_pierres']
-		}
+		},
+		onAdd: function (evt){
+			placeholder1.remove();
+    	}
 	});
 
 Sortable.create(
@@ -36,7 +43,10 @@ Sortable.create(
 		group: {
 			name: 'dropnatasha',
 			put: ['the_natashas']
-		}
+		},
+		onAdd: function (evt){
+			placeholder2.remove();
+    	}
 	});
 
 Sortable.create(
@@ -44,5 +54,8 @@ Sortable.create(
 		group: {
 			name: 'dropandrei',
 			put: ['the_andreis']
-		}
+		},
+		onAdd: function (evt){
+			placeholder3.remove();
+    	}
 	});

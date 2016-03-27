@@ -1,34 +1,39 @@
 .sort-columns {
-	padding: 10px;
-	width: 100%;
-	margin: 5px;
-	text-align: center;
-	display: inline-block;
-	
+  padding: 10px;
+  width: 100%;
+  margin: 5px;
+  text-align: center;
+  display: inline-block;
+  
 }
 
 .photoarea {
-	min-width: 230px;
-	background-color: #D7E0F5;
-	vertical-align: top;
+  min-width: 230px;
+  background-color: #D7E0F5;
+  vertical-align: top;
 }
 
 .photoarea h3{
-	padding: 10px;
+  padding: 10px;
     cursor: move;
     padding-bottom: 10px;
     border-bottom: 1px solid #1abc9c;
 }
 
 .img-circle {
-	border-radius: 50%;
-	width: 120px;
- 	height: 120px;
- 	padding: 5px;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  padding: 5px;
 }
 
 #droppierre, #dropnatasha, #dropandrei {
+  min-height: 150px;
   border: 1px dashed #f60;
-  color: #ddd;
   text-align: center;
+}
+
+#placeholderpierre, #placeholdernatasha, #placeholderandrei {  
+  color: #ddd;
+  font-size: 20px; 
 }
