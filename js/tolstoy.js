@@ -6,6 +6,9 @@ var placeholder1 =  document.getElementById("placeholderpierre");
 var placeholder2 =  document.getElementById("placeholdernatasha");
 var placeholder3 =  document.getElementById("placeholderandrei");
 
+var myNodeList = document.querySelectorAll('.img-circle'); 
+var myArray = [];
+
 var pierresMedianAge = 24;
 var natashasMedianAge = 16;
 var andreisMedianAge = 29.5;
@@ -17,7 +20,7 @@ var AndreisStandardDeviation = math.std(31, andreisMedianAge);
 Sortable.create(pierre, {
 		group: {
 			name:'the_pierres',
-			put: ['droppierre']
+			put: ['droppierre'],
 		}
 	});
 
@@ -42,8 +45,18 @@ Sortable.create(
 			put: ['the_pierres']
 		},
 		onAdd: function (evt){
+
+						for (var i = 0; i < myNodeList.length; i++) {
+			    var self = myNodeList[i];
+			    myArray.push(self);
+				}
+
+			var alts = [].slice.call(document.querySelectorAll('.img-circle'));
+
+			pierreActor = alts[0].alt;
+
 			placeholder1.remove();
-			document.getElementById("PierresDeviation").innerHTML = ("standard deviation from Pierre's age: " + math.format(PierresStandardDeviation, {precision: 4}));
+			document.getElementById("PierresDeviation").innerHTML = (pierreActor + "</br>standard deviation from Pierre's age: " + math.format(PierresStandardDeviation, {precision: 4}));
     	}
 	});
 
@@ -54,8 +67,18 @@ Sortable.create(
 			put: ['the_natashas']
 		},
 		onAdd: function (evt){
+
+			for (var i = 0; i < myNodeList.length; i++) {
+			    var self = myNodeList[i];
+			    myArray.push(self);
+				}
+
+			var alts = [].slice.call(document.querySelectorAll('.img-circle'));
+
+			var natashaActress = alts[5].alt;
+
 			placeholder2.remove();
-			document.getElementById("NatashasDeviation").innerHTML = ("standard deviation from Natasha's age: " + math.format(NatashasStandardDeviation, {precision: 4}));
+			document.getElementById("NatashasDeviation").innerHTML = (natashaActress + "</br>standard deviation from Natasha's age: " + math.format(NatashasStandardDeviation, {precision: 4}));
     	}
 	});
 
@@ -66,7 +89,17 @@ Sortable.create(
 			put: ['the_andreis']
 		},
 		onAdd: function (evt){
+
+			for (var i = 0; i < myNodeList.length; i++) {
+			    var self = myNodeList[i];
+			    myArray.push(self);
+				}
+
+			var alts = [].slice.call(document.querySelectorAll('.img-circle'));
+
+			var andreiActor = alts[10].alt;
+
 			placeholder3.remove();			
-			document.getElementById("AndreisDeviation").innerHTML = ("standard deviation from Andrei's age: " + math.format(AndreisStandardDeviation, {precision: 4}));
+			document.getElementById("AndreisDeviation").innerHTML = (andreiActor + "</br>standard deviation from Andrei's age: " + math.format(AndreisStandardDeviation, {precision: 4}));
     	}
 	});
