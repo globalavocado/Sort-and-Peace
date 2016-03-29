@@ -4,7 +4,6 @@
   margin: 5px;
   text-align: center;
   display: inline-block;
-  
 }
 
 .photoarea {
@@ -15,13 +14,13 @@
 
 .photoarea h3{
   padding: 10px;
-    cursor: move;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #1abc9c;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #1abc9c;
 }
 
 .img-circle {
   border-radius: 50%;
+  cursor: move;
   width: 120px;
   height: 120px;
   padding: 5px;
@@ -36,4 +35,8 @@
 #placeholderpierre, #placeholdernatasha, #placeholderandrei {  
   color: #ddd;
   font-size: 20px; 
+}
+
+.age-deviation {
+  color: #E74C3C;
 }
