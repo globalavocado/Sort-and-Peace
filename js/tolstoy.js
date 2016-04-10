@@ -6,9 +6,9 @@ var placeholder1 =  document.getElementById("placeholderpierre");
 var placeholder2 =  document.getElementById("placeholdernatasha");
 var placeholder3 =  document.getElementById("placeholderandrei");
 
-var pierresMedianAge = 24;
-var natashasMedianAge = 16;
-var andreisMedianAge = 29.5;
+var pierresMeanAge = math.mean([20,21,22,23,24,25,26,27]);
+var natashasMeanAge = math.mean([13,14,15,16,17,18,19,20]);
+var andreisMeanAge = math.mean([28,29,30,31,32,33,34,35]);
 
 Sortable.create(pierre, {
     group: {
@@ -57,11 +57,11 @@ Sortable.create(
             ageArray.push(self);
           }
       var pierreActorAge = Number(myNodeList[0].getAttribute("data-age"));
-      var PierresStandardDeviation = math.std(pierreActorAge, pierresMedianAge);
+      var PierresStandardDeviation = math.std(pierreActorAge, pierresMeanAge);
 
       placeholder1.remove();
 
-      document.getElementById("PierresDeviation").innerHTML = ("actor: " + pierreActor + " (" + pierreActorAge + ")" +  "</br>standard deviation from Pierre's age:  <span class='age-deviation'>" + math.format(PierresStandardDeviation, {precision: 2}) + "</span>" );
+      document.getElementById("PierresDeviation").innerHTML = ("actor: " + pierreActor + " (" + pierreActorAge + ")" +  "</br>standard deviation from Pierre's age:  <span class='age-deviation'>" + Number(PierresStandardDeviation.toFixed(2)) + "</span>" );
       }
   });
 
@@ -91,11 +91,11 @@ Sortable.create(
             ageArray.push(self);
           }
       var natashaActressAge = Number(myNodeList[5].getAttribute("data-age"));
-      var NatashasStandardDeviation = math.std(natashaActressAge, natashasMedianAge);
+      var NatashasStandardDeviation = math.std(natashaActressAge, natashasMeanAge);
 
       placeholder2.remove();
 
-      document.getElementById("NatashasDeviation").innerHTML = ("actress: " + natashaActress + " (" + natashaActressAge + ")" + "</br>standard deviation from Natasha's age: <span class='age-deviation'>" + math.format(NatashasStandardDeviation, {precision: 2}) + "</span>" );
+      document.getElementById("NatashasDeviation").innerHTML = ("actress: " + natashaActress + " (" + natashaActressAge + ")" + "</br>standard deviation from Natasha's age: <span class='age-deviation'>" + Number(NatashasStandardDeviation.toFixed(2)) + "</span>" );
       }
   });
 
@@ -125,10 +125,10 @@ Sortable.create(
             ageArray.push(self);
           }
       var andreiActorAge = Number(myNodeList[10].getAttribute("data-age"));
-      var AndreisStandardDeviation = math.std(andreiActorAge, andreisMedianAge);
+      var AndreisStandardDeviation = math.std(andreiActorAge, andreisMeanAge);
 
       placeholder3.remove();
 
-      document.getElementById("AndreisDeviation").innerHTML = ("actor: " + andreiActor + " (" + andreiActorAge + ")" + "</br>standard deviation from Andrei's age: <span class='age-deviation'>" + math.format(AndreisStandardDeviation, {precision: 2}) + "</span>" );
+      document.getElementById("AndreisDeviation").innerHTML = ("actor: " + andreiActor + " (" + andreiActorAge + ")" + "</br>standard deviation from Andrei's age: <span class='age-deviation'>" + Number(AndreisStandardDeviation.toFixed(2)) + "</span>" );
       }
   });
