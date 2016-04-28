@@ -4,7 +4,7 @@
 
 ### specification
 - photos of all 15 actors who have played one of these roles in the five film / TV adaptations of 'War and Peace' (excluding 1915), grouped into three sortable character areas
-- dragging a photo into the drop area of the character triggers the loading of metadata from the database
+- dragging a photo into the drop area of the character triggers the loading of data attributes from the image (in future this will come from a database)
 - the standard age deviation between actors and characters will automatically be calculated with a mathematical library
 
 ## technologies used:
