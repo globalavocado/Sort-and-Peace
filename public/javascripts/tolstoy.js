@@ -2,8 +2,6 @@ var the_pierres =  document.getElementById("pierre");
 var the_natashas =  document.getElementById("natasha");
 var the_andreis =  document.getElementById("andrei");
 
-
-
 var placeholder1 =  document.getElementById("placeholderpierre");
 var placeholder2 =  document.getElementById("placeholdernatasha");
 var placeholder3 =  document.getElementById("placeholderandrei");
@@ -12,7 +10,7 @@ var pierresMeanAge = math.mean([20,21,22,23,24,25,26,27]);
 var natashasMeanAge = math.mean([13,14,15,16,17,18,19,20]);
 var andreisMeanAge = math.mean([28,29,30,31,32,33,34,35]);
 
-Sortable.create(the_pierres, {
+Sortable.create(pierre, {
     group: {
       name:'the_pierres',
       put: ['droppierre'],
