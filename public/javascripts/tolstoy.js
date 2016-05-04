@@ -2,33 +2,52 @@ var the_pierres =  document.getElementById("pierre");
 var the_natashas =  document.getElementById("natasha");
 var the_andreis =  document.getElementById("andrei");
 
+var PierresInfo = document.getElementById("PierresDeviation");
+var NatashasInfo = document.getElementById("NatashasDeviation");
+var AndreisInfo = document.getElementById("AndreisDeviation");
+
 var placeholder1 =  document.getElementById("placeholderpierre");
 var placeholder2 =  document.getElementById("placeholdernatasha");
 var placeholder3 =  document.getElementById("placeholderandrei");
 
-var pierresMeanAge = math.mean([20,21,22,23,24,25,26,27]);
-var natashasMeanAge = math.mean([13,14,15,16,17,18,19,20]);
+var pierresMeanAge = math.mean([20,21,22,23,24,25,26,27,28]);
+var natashasMeanAge = math.mean([13,14,15,16,17,18,19,20,21]);
 var andreisMeanAge = math.mean([28,29,30,31,32,33,34,35]);
 
 Sortable.create(pierre, {
     group: {
       name:'the_pierres',
       put: ['droppierre'],
-    }
+    },
+      onAdd: function (evt){
+        while (PierresInfo.hasChildNodes()) {
+          PierresInfo.removeChild(PierresInfo.firstChild);
+        }
+      }
   });
 
 Sortable.create(natasha, {
     group: {
       name:'the_natashas',
-      put: ['dropnatasha']
-    }
+      put: ['dropnatasha'],
+    },
+      onAdd: function (evt){
+        while (NatashasInfo.hasChildNodes()) {
+          NatashasInfo.removeChild(NatashasInfo.firstChild);
+        }
+      }
   });
 
 Sortable.create(andrei, {
     group: {
       name:'the_andreis',
-      put: ['dropandrei']
-    }
+      put: ['dropandrei'],
+    },
+      onAdd: function (evt){
+        while (AndreisInfo.hasChildNodes()) {
+          AndreisInfo.removeChild(AndreisInfo.firstChild);
+        }
+      } 
   });
 
 Sortable.create(
