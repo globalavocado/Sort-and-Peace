@@ -30,7 +30,7 @@ start the Node server:
 
 ### run the tests:
 
-install Selenium globally and start Selenium server
+install Selenium globally and start Selenium server - in order for the following to work you need to have a Java Developer Kit (JDK) installed
 ~~~
   ... $ npm install -g selenium-standalone@latest
   ... $ selenium-standalone install
